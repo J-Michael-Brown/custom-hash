@@ -10,6 +10,10 @@ class Worse_Hach
     @db_keys.include?(key)
   end
 
+  def has_val?(val)
+    @db_vals.include?(val)
+  end
+
   def length
     @db_keys.length
   end

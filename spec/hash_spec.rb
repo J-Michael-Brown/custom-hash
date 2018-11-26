@@ -22,6 +22,14 @@ describe ("Worse_Hach class") do
     expect(test2.has_key?("puppy")).to eq(false)
   end
 
+  it ("has_val? should return boolean whether val is within hash") do
+    test2 = Worse_Hach.new()
+    test2.single_store("kitten","yarn")
+
+    expect(test2.has_val?("yarn")).to eq(true)
+    expect(test2.has_val?("ball")).to eq(false)
+  end
+
   it ("length should return integer of hash size") do
     test3 = Worse_Hach.new()
     test3.worse_store("kittie => cute", "poopie => smellie", "apple => tree", "computer => keyboard")
